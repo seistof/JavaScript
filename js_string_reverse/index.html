@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String reverse</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 75px;
+            background: #2b2b2b;
+            color: #cb772f;
+        }
+
+        input {
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="input" placeholder="enter your string"><input type="submit" id="submit">
+<p id="result"></p>
+</body>
+<script>
+
+    var a = '';
+
+    document.getElementById('submit').onclick = function () {
+        for (var i = document.getElementById('input').value.length - 1; i >= 0; i--) {
+            a += document.getElementById('input').value[i];
+        }
+        document.getElementById('result').innerHTML = 'Reversed: ' + a;
+        a = '';
+    }
+</script>
+</html>
